@@ -1,43 +1,26 @@
+import statistics as stats
+
+
 def pitagch(x,y):
-    return (x**2 - y**2)**(1/2)
+  return (x**2 - y**2)**(1/2)
 
-def pitagcc(x,y):
-    return (x**2 + y**2)**(1/2)
-
-def cak(x,y):
-    return(x+273)
-    
-def kac(x,y):
-    return(y-273)
-    
-reset = 0
 print("Operaciones disponibles : ")
     # Despues de aqui se ponen las funciones que se han creado
-print("Pitágoras")
-print("Conversión de temperatura")
-operacion=input("¿Que operación deseas realizar? : ")
+print("Pitagoras")
+ope=input("¿Que operación deseas realizar? : ")
 
-if operacion == "Pitágoras":
-    while reset == 0:
-        type_of_pitagoras = input("¿Trabajaremos con dos catetos o con un cateto y una hipotenusa? (Escribe cc o ch) : ")
-        if type_of_pitagoras == "ch":
-            c = float(input("Dime el cateto : "))
-            h = float(input("Dime la hipotenusa : "))
-            reset = 1
-            rpta = pitagch(h,c)
-        elif type_of_pitagoras == "cc":
-            c1 = float(input("Dime un cateto : "))
-            c2 = float(input("Dime otro cateto : "))
-            rpta = pitagcc(c1,c2)
-            reset = 1
-        else:
-            print ("Porfavor limitarse a responder con las opciones dadas")
-            reset = 0
-print(f"La respuesta es  {rpta}")
-
-if operacion== "Conversión de temperatura":
-    temp=input("¿Estás usando celsius y kelvin?, ¿estás usando celsius y fahrenheit?, ¿estás usando fahrenheit y kelvin? (Marcar ck, cf o fk): ")
-    
-    if temp==ck:
+if ope == "Pitagoras":5
+    type_of_pitagoras = input("¿Trabajaremos con dos catetos o con un cateto y una hipotenusa? (escribe cc o ch) : ")
+    if type_of_pitagoras == "ch":
+        c = float(input("Dime el cateto : "))
+        h = float(input("Dime la hipotenusa : "))
+        rpta = pitagch(h,c)
         
+print(f"La respuesta es : {rpta}")
 
+def media (x):
+    lista= [int(input)]
+    a=0
+    for i in lista:
+        a=i+a
+print(a/len(lista))
